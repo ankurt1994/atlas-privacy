@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atlas — Support</title>
+<style>
+  :root{
+    --coral:#E8543F; --coral-hi:#FF6F5B; --ink:#2B2622; --muted:#6B635C;
+    --cream:#FBF7EF; --card:#FFFFFF; --line:#ECE5DA;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:48px 22px 80px}
+  .badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px}
+  .mark{width:40px;height:40px;border-radius:11px;
+    background:linear-gradient(140deg,var(--coral-hi),var(--coral));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;
+    box-shadow:0 6px 16px rgba(232,84,63,.28)}
+  h1{font-size:30px;line-height:1.2;margin:8px 0 6px;letter-spacing:-.5px}
+  .lead{color:var(--muted);font-size:17px;margin:0 0 30px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:0 0 18px}
+  h2{font-size:19px;margin:0 0 12px;letter-spacing:-.2px}
+  p{margin:0 0 12px}
+  a{color:var(--coral);text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+  details{border-top:1px solid var(--line);padding:14px 0}
+  details:first-of-type{border-top:none}
+  summary{cursor:pointer;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+";color:var(--coral);font-weight:800;margin-right:10px}
+  details[open] summary::before{content:"–"}
+  .answer{color:var(--muted);padding:10px 0 2px 22px}
+  .cta{display:inline-block;margin-top:6px;background:var(--coral);color:#fff;padding:12px 20px;border-radius:12px;font-weight:700}
+  .cta:hover{text-decoration:none;opacity:.92}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:34px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge"><div class="mark">A</div><strong>Atlas</strong></div>
+    <h1>Support</h1>
+    <p class="lead">Atlas turns your flight, hotel and rental confirmations into one clean trip timeline. Need a hand? Start here.</p>
+
+    <div class="card">
+      <h2>Contact us</h2>
+      <p>In the app, go to <strong>Profile → Send feedback</strong> — it reaches the developer directly with your app version attached. Or email us; we usually reply within one business day.</p>
+      <p><a class="cta" href="mailto:ankurthakkar19@gmail.com?subject=Atlas%20Support">Email Atlas Support</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Frequently asked questions</h2>
+
+      <details>
+        <summary>How does Atlas find my trips?</summary>
+        <div class="answer">Three ways: forward a confirmation email to your personal Atlas address (shown in <strong>Profile → Forward confirmations</strong>, ending in @atlastrips.app), connect Gmail so Atlas finds them for you, or add bookings by hand with the + button on any trip.</div>
+      </details>
+
+      <details>
+        <summary>Why can't I connect Gmail?</summary>
+        <div class="answer">Gmail sync is in a limited beta while Google reviews Atlas, so Google may block the connection for some accounts. Forwarding works for everyone in the meantime, with any email provider.</div>
+      </details>
+
+      <details>
+        <summary>Does Atlas read all of my email?</summary>
+        <div class="answer">No. Atlas uses Gmail read-only access and only opens messages identified as travel confirmations. It never sends, deletes, or modifies your email, and it does not read or store the content of non-travel messages. See our <a href="./privacy.html">Privacy Policy</a> for full detail.</div>
+      </details>
+
+      <details>
+        <summary>I connected Gmail but no trips appeared.</summary>
+        <div class="answer">Make sure your inbox contains at least one flight or hotel confirmation, then pull down to refresh on the Trips screen. Initial sync can take 10–30 seconds. If trips still don't appear, forward the confirmation instead, or send us feedback from the app.</div>
+      </details>
+
+      <details>
+        <summary>How do I disconnect my email or delete my account?</summary>
+        <div class="answer">To stop Gmail access, remove Atlas at myaccount.google.com/permissions. To delete your entire account and all associated data, tap <strong>Profile → Delete account</strong>, or email us and we'll handle it within 30 days.</div>
+      </details>
+
+      <details>
+        <summary>Which email providers are supported?</summary>
+        <div class="answer">Forwarding works with every provider. Direct Gmail sync is in beta; Outlook / Microsoft 365 and iCloud sync are planned.</div>
+      </details>
+
+      <details>
+        <summary>Is my data secure?</summary>
+        <div class="answer">Email access tokens are encrypted at rest and all traffic uses TLS. We never sell your data or use it for advertising. Read the full <a href="./privacy.html">Privacy Policy</a>.</div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h2>Legal</h2>
+      <p><a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a></p>
+    </div>
+
+    <footer>© 2026 Atlas · Built by Ankur Thakkar · ankurthakkar19@gmail.com · <a href="terms.html">Terms</a></footer>
+  </div>
+</body>
+</html>
