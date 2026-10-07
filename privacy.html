@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atlas — Privacy Policy</title>
+<style>
+  :root{--coral:#E8543F;--coral-hi:#FF6F5B;--ink:#2B2622;--muted:#6B635C;--cream:#FBF7EF;--card:#fff;--line:#ECE5DA}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 22px 80px}
+  .badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px}
+  .mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(140deg,var(--coral-hi),var(--coral));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;box-shadow:0 6px 16px rgba(232,84,63,.28)}
+  h1{font-size:30px;margin:6px 0 4px;letter-spacing:-.5px}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 26px 18px}
+  h2{font-size:20px;margin:26px 0 8px;letter-spacing:-.2px}
+  h3{font-size:16px;margin:18px 0 4px}
+  p{margin:0 0 12px}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin:0 0 6px}
+  a{color:var(--coral);text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+  strong{color:var(--ink)}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:30px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge"><div class="mark">A</div><strong>Atlas</strong></div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: October 7, 2026</p>
+
+    <div class="card">
+      <p>Atlas ("we", "our", "the app") is a personal travel assistant that reads your flight, hotel, rental car, and train reservations from your connected email accounts and organizes them into a unified trip timeline. This policy explains what data we collect, how we use it, and the choices you have.</p>
+      <p>Atlas is operated by Ankur Thakkar as an independent developer. If you have any questions about this policy, email <strong>ankurthakkar19@gmail.com</strong>.</p>
+
+      <h2>Information We Collect</h2>
+      <h3>Account information</h3>
+      <p>When you sign up, we store your email address, the name you give us, and a user identifier. If you sign in with Apple or Google, we receive the name, email address and (Google only) profile photo that you allow those services to share. We do not ask for your phone number, date of birth, or any government ID.</p>
+      <h3>Email access tokens</h3>
+      <p>When you connect a Gmail account, Google issues OAuth tokens with read-only access. Depending on how you connect, the token is kept in your device's secure keychain (when the scan runs on your phone) or encrypted at rest on our servers (for background sync). We never see or store your email password.</p>
+      <h3>Email content (travel-related only)</h3>
+      <p>Atlas scans the subject lines and senders of messages in your connected inbox to identify travel confirmations. When it finds one, it reads the body of that specific message and sends the text to an AI model operated by Anthropic PBC to extract structured trip details (airline, flight number, dates, confirmation number, hotel name, etc.). We do not read, store, or transmit the content of non-travel emails.</p>
+      <h3>Extracted trip data</h3>
+      <p>The structured results from parsing — airline codes, flight times, hotel names, confirmation numbers, booking amounts — are stored in our database so you can see them in the app. You can delete any trip or disconnect your email account at any time from within the app.</p>
+      <h3>Emails you forward to Atlas</h3>
+      <p>If you forward a confirmation to your personal Atlas address, our email provider (Cloudflare) receives that message and passes it to us. We extract the reservation, keep the sender address, subject and extracted details with the booking, and discard the rest of the message.</p>
+      <h3>Things you add yourself</h3>
+      <p>Trips, notes, packing lists, expenses, polls and any documents or photos you choose to upload are stored so they sync across your devices. If you invite people to a trip, they can see that trip's itinerary, polls and shared expenses.</p>
+      <h3>Information that stays on your device</h3>
+      <p>The emergency medical card (blood type, allergies, medications, insurance and emergency contact), your packing checklist state and appearance settings are stored only on your device. We never receive them.</p>
+      <h3>AI features</h3>
+      <p>When you use Ask Atlas, menu or food scanning, or restaurant and activity suggestions, the text or image you submit plus relevant trip context (such as destination and dates) is sent to Anthropic's Claude API to generate a response. We keep a daily count of AI requests per account to prevent abuse. AI output can be wrong; always confirm details with the provider.</p>
+      <h3>Flight search</h3>
+      <p>When you search flights, the route, dates, cabin and passenger count are sent to our fare providers (Amadeus and Seats.aero). No personal information is included.</p>
+      <h3>Camera and photos</h3>
+      <p>Atlas uses your camera or photo library only when you choose to scan or attach an image. We do not use your location and we do not track you across other companies' apps or websites.</p>
+      <h3>Product usage and diagnostics</h3>
+      <p>To understand where people get stuck and to fix bugs, the app records simple usage events (for example "signed up", "trip created", "Trip Mode opened"), error reports (error message, stack trace, app version) and any feedback you send us. These are stored in our own database, linked to your account and a random install ID, never include your email content or trip details, are not shared with third parties, and are not used for advertising or tracking across other apps.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use your information only to:</p>
+      <ul>
+        <li>Provide the core Atlas functionality of fetching, parsing, and displaying your travel reservations</li>
+        <li>Authenticate you when you open the app</li>
+        <li>Debug crashes and improve reliability</li>
+        <li>Respond to your support requests</li>
+      </ul>
+      <p>We do not sell your data. We do not share it with advertisers, marketers, or data brokers. We do not use your email content to train AI models.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>Atlas relies on the following service providers to operate. Your data is handled by each according to their own privacy practices:</p>
+      <ul>
+        <li><strong>Google (Gmail API)</strong> — reads your email with your explicit OAuth consent. See <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+        <li><strong>Supabase</strong> — hosts our encrypted database and backend functions. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
+        <li><strong>Anthropic</strong> — processes travel emails and your AI feature requests through their Claude API. Anthropic does not train on data submitted through their API. See <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</li>
+        <li><strong>Cloudflare</strong> — receives emails you forward to your Atlas address and passes them to us. See <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</li>
+        <li><strong>Amadeus and Seats.aero</strong> — return flight fares for the searches you run (no personal data is sent).</li>
+        <li><strong>Unsplash</strong> — destination photos are loaded from Unsplash's image servers, which see standard request information such as your IP address. See <a href="https://unsplash.com/privacy">unsplash.com/privacy</a>.</li>
+        <li><strong>Apple</strong> — distributes the app through the App Store and provides basic crash reporting. See <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</li>
+      </ul>
+
+      <h2>Google API Services User Data Policy</h2>
+      <p>Atlas's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+      <ul>
+        <li>We only use Gmail data to provide the user-facing travel timeline feature</li>
+        <li>We do not transfer Gmail data to others except as necessary to provide this feature, comply with applicable law, or as part of a merger or acquisition</li>
+        <li>We do not use Gmail data for serving advertisements</li>
+        <li>We do not allow humans to read Gmail data unless we have your explicit consent, it is necessary for security purposes, to comply with applicable law, or for internal operations where the data has been aggregated and anonymized</li>
+      </ul>
+
+      <h2>Data Retention</h2>
+      <p>We keep your data for as long as your account is active. When you disconnect an email account from within Atlas, we delete the associated OAuth tokens and extracted trip data within 30 days. When you delete your Atlas account, we delete all associated data within 30 days.</p>
+      <p>You can delete your account and all associated data yourself at any time in <strong>Profile → Delete account</strong>. You can also request a full export or deletion by emailing <strong>ankurthakkar19@gmail.com</strong>; we respond within 30 days.</p>
+
+      <h2>Your Rights</h2>
+      <p>Regardless of where you live, you can ask us what data we have about you, request that we correct or delete your data, disconnect any connected email account from within the app, and delete your Atlas account entirely. If you are a resident of the European Economic Area, the United Kingdom, or California, you have additional rights under GDPR, UK GDPR, and the CCPA respectively, including the right to lodge a complaint with a supervisory authority.</p>
+
+      <h2>Children</h2>
+      <p>Atlas is not intended for children under 13, and we do not knowingly collect data from anyone under 13. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+
+      <h2>Security</h2>
+      <p>Server-stored email OAuth tokens are encrypted at rest. Every database table is protected by row-level security so an account can only read its own data and the trips it has been invited to. All network traffic between the app, our servers, and third-party APIs uses TLS 1.2 or higher. We follow industry-standard practices for access control, logging, and backup, but no system is perfectly secure. If we ever discover a security incident affecting your data, we will notify you as required by applicable law.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy as Atlas evolves. When we do, we will update the "Last updated" date at the top and, for material changes, notify you within the app before the changes take effect.</p>
+
+      <h2>Contact</h2>
+      <p>Questions, requests, or complaints: <strong>ankurthakkar19@gmail.com</strong> · <a href="./support.html">Support</a></p>
+    </div>
+
+    <footer>© 2026 Atlas · Built by Ankur Thakkar · <a href="terms.html">Terms</a></footer>
+  </div>
+</body>
+</html>
