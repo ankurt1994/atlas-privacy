@@ -31,7 +31,7 @@
   <div class="wrap">
     <div class="badge"><div class="mark">A</div><strong>Atlas</strong></div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 7, 2026</p>
+    <p class="updated">Last updated: October 10, 2026</p>
 
     <div class="card">
       <p>Atlas ("we", "our", "the app") is a personal travel assistant that reads your flight, hotel, rental car, and train reservations from your connected email accounts and organizes them into a unified trip timeline. This policy explains what data we collect, how we use it, and the choices you have.</p>
@@ -41,9 +41,9 @@
       <h3>Account information</h3>
       <p>When you sign up, we store your email address, the name you give us, and a user identifier. If you sign in with Apple or Google, we receive the name, email address and (Google only) profile photo that you allow those services to share. We do not ask for your phone number, date of birth, or any government ID.</p>
       <h3>Email access tokens</h3>
-      <p>When you connect a Gmail account, Google issues OAuth tokens with read-only access. Depending on how you connect, the token is kept in your device's secure keychain (when the scan runs on your phone) or encrypted at rest on our servers (for background sync). We never see or store your email password.</p>
+      <p>When you connect a Gmail account, Google issues OAuth tokens with read-only access. The token is kept in your device's secure keychain. When you run “Find my trips”, the app sends that short-lived token to our server with each scan request so the scan can run there; the server uses it only for that scan and does not store it. If you turn on background sync, a token is stored encrypted at rest on our servers. We never see or store your email password.</p>
       <h3>Email content (travel-related only)</h3>
-      <p>Atlas scans the subject lines and senders of messages in your connected inbox to identify travel confirmations. When it finds one, it reads the body of that specific message and sends the text to an AI model operated by Anthropic PBC to extract structured trip details (airline, flight number, dates, confirmation number, hotel name, etc.). We do not read, store, or transmit the content of non-travel emails.</p>
+      <p>Atlas searches your connected inbox for messages from travel companies or with booking words in the subject (for example “confirmation” or “itinerary”), going back up to 10 years when you run “Find my trips”. For each match it reads the subject and sender; only when those look like a travel confirmation does it read the body of that specific message and send the text to an AI model operated by Anthropic PBC to extract structured trip details (airline, flight number, dates, confirmation number, hotel name, country, etc.). We keep the IDs of messages already read so a later scan only reads new mail; we do not keep the email text. We do not read, store, or transmit the content of non-travel emails.</p>
       <h3>Extracted trip data</h3>
       <p>The structured results from parsing — airline codes, flight times, hotel names, confirmation numbers, booking amounts — are stored in our database so you can see them in the app. You can delete any trip or disconnect your email account at any time from within the app.</p>
       <h3>Emails you forward to Atlas</h3>
@@ -54,6 +54,20 @@
       <p>The emergency medical card (blood type, allergies, medications, insurance and emergency contact), your packing checklist state and appearance settings are stored only on your device. We never receive them.</p>
       <h3>AI features</h3>
       <p>When you use Ask Atlas, menu or food scanning, or restaurant and activity suggestions, the text or image you submit plus relevant trip context (such as destination and dates) is sent to Anthropic's Claude API to generate a response. We keep a daily count of AI requests per account to prevent abuse. AI output can be wrong; always confirm details with the provider.</p>
+      <h3>Places you save from social media and the web</h3>
+      <p>When you share a link to Atlas (from Instagram, TikTok, YouTube or a website), paste one, or email one to your Atlas address, we fetch that post's <em>public</em> preview information — its title, caption or description, author name and thumbnail address — the same details any link preview shows. We never download the video, and we never access your social media accounts. The link, that preview text and any note you add are sent to Anthropic's Claude API to identify the places it features. Place names are looked up on OpenStreetMap's Nominatim service to get map coordinates (only the place name and city are sent). We store the link, the places found and short descriptive tags, and use them to show your saves on matching trips and to describe your travel taste inside the app. You can delete any save at any time.</p>
+      <h3>Explore (restaurants, things to do, sights)</h3>
+      <p>When you open Explore for a trip, our server looks up places near that trip's hotel (or the city centre) using the Google Places API. Only the hotel name and address, or the city name, and a search phrase (such as “restaurants”) are sent — never your name or account details. Results are cached for a few days and shared between trips in the same area. If you have saved places, an AI model (Anthropic) may compare their names and categories with the nearby places to suggest a short reason a place fits your taste. Places you save from Explore are added to your Saved list.</p>
+      <h3>Voice companion</h3>
+      <p>The microphone is used only while you hold the talk button. Your speech is converted to text by your device's speech recognition service (Apple on iOS, Google on Android), which may process audio on their servers. The resulting text — not the audio — is sent with relevant trip context to Anthropic's Claude API to answer. Atlas does not record or store audio.</p>
+      <h3>Location</h3>
+      <p>Atlas asks for your location only when you turn on “Near me” in the companion or ask about something nearby. Your position is rounded to about 100 meters, sent with that one question to pick from places you saved nearby, and not stored. Atlas never tracks your location in the background.</p>
+      <h3>Notifications</h3>
+      <p>If you turn on notifications, we store your device's push token so we can tell you when a booking is added, a save is ready, or a trip is coming up. Messages are delivered through Expo's push service and Apple Push Notification service. Signing out removes the token; you can also turn notifications off in iOS Settings.</p>
+      <h3>Live flight status</h3>
+      <p>For flights in your trips, Atlas looks up live status (delays, gates, terminals, cancellations, baggage carousel) from a flight-data provider, starting 24 hours before departure until shortly after landing. Only the flight number and date are sent — never your name or confirmation code.</p>
+      <h3>Group trips</h3>
+      <p>When you invite someone by email, we notify them if they already use Atlas. People who join a trip can see its itinerary and the places members choose to add to it. Your saved places stay private unless you add them to a shared trip.</p>
       <h3>Flight search</h3>
       <p>When you search flights, the route, dates, cabin and passenger count are sent to our fare providers (Amadeus and Seats.aero). No personal information is included.</p>
       <h3>Camera and photos</h3>
@@ -78,6 +92,10 @@
         <li><strong>Supabase</strong> — hosts our encrypted database and backend functions. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
         <li><strong>Anthropic</strong> — processes travel emails and your AI feature requests through their Claude API. Anthropic does not train on data submitted through their API. See <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</li>
         <li><strong>Cloudflare</strong> — receives emails you forward to your Atlas address and passes them to us. See <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</li>
+        <li><strong>AeroDataBox (via RapidAPI)</strong> — provides live flight status; receives only flight numbers and dates.</li>
+        <li><strong>Google (Places API)</strong> — returns nearby restaurants, sights and photos for Explore; receives a hotel or city name and a search phrase, never your personal details. See <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+        <li><strong>OpenStreetMap Foundation (Nominatim)</strong> — converts saved place names into map coordinates; receives the place name and city only. See <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org/wiki/Privacy_Policy</a>.</li>
+        <li><strong>Instagram, TikTok and YouTube</strong> — when you save one of their links, we request that post's public preview from them; they see a request from our server, not from you.</li>
         <li><strong>Amadeus and Seats.aero</strong> — return flight fares for the searches you run (no personal data is sent).</li>
         <li><strong>Unsplash</strong> — destination photos are loaded from Unsplash's image servers, which see standard request information such as your IP address. See <a href="https://unsplash.com/privacy">unsplash.com/privacy</a>.</li>
         <li><strong>Apple</strong> — distributes the app through the App Store and provides basic crash reporting. See <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</li>
@@ -94,7 +112,7 @@
 
       <h2>Data Retention</h2>
       <p>We keep your data for as long as your account is active. When you disconnect an email account from within Atlas, we delete the associated OAuth tokens and extracted trip data within 30 days. When you delete your Atlas account, we delete all associated data within 30 days.</p>
-      <p>You can delete your account and all associated data yourself at any time in <strong>Profile → Delete account</strong>. You can also request a full export or deletion by emailing <strong>ankurthakkar19@gmail.com</strong>; we respond within 30 days.</p>
+      <p>You can delete your account and all associated data yourself at any time in <strong>You → Settings → Delete account</strong>. You can also request a full export or deletion by emailing <strong>ankurthakkar19@gmail.com</strong>; we respond within 30 days.</p>
 
       <h2>Your Rights</h2>
       <p>Regardless of where you live, you can ask us what data we have about you, request that we correct or delete your data, disconnect any connected email account from within the app, and delete your Atlas account entirely. If you are a resident of the European Economic Area, the United Kingdom, or California, you have additional rights under GDPR, UK GDPR, and the CCPA respectively, including the right to lodge a complaint with a supervisory authority.</p>
